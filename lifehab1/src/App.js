@@ -3,6 +3,12 @@ import React from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import Slider from './components/Slider/Slider';
+import styled from 'styled-components';
+
+const Styles = styled.div`
+
+`;
 
 class App extends React.Component {
   state = {
@@ -31,7 +37,8 @@ class App extends React.Component {
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <main style={{marginTop: '64px'}}>
-          <p>This is the page content!</p>
+          <p>Put a bunch of stuff here</p>
+          <Slider/>
         </main>
         
       </div>
