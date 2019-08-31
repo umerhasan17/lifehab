@@ -5,6 +5,8 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Slider from './components/Slider/Slider';
 import styled from 'styled-components';
+import Card from './components/Card/Card';
+import SliderCard from './components/Card/SliderCard';
 
 const Styles = styled.div`
 
@@ -38,7 +40,9 @@ class App extends React.Component {
         {backdrop}
         <main style={{marginTop: '64px'}}>
           <p>Put a bunch of stuff here</p>
-          <Slider/>
+          <Slider label="Light 1"/>
+          <Card />
+          <SliderCard />
         </main>
         
       </div>
