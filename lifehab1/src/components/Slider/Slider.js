@@ -22,10 +22,10 @@ const Styles = styled.div`
   margin-bottom: 2rem;
   .value {
     flex: 1;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .slider-label {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     
   }
   .slider {
