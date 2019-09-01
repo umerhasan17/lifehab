@@ -51,3 +51,12 @@ class App extends React.Component {
 }
 
 export default App;
+
+/* TODO
+
+Extending classes and creating additional CSS on top of other class CSS
+Animations in React
+
+
+
+*/
