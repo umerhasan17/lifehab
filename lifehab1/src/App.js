@@ -41,7 +41,7 @@ class App extends React.Component {
         <main style={{marginTop: '64px'}}>
           <p>Put a bunch of stuff here</p>
           <Slider label="Light 1"/>
-          <Card />
+          <Card title="Light" sliders={{"Light 1" : 0, "Light 2" : 50, "Light 3" : 100}}/>
           <SliderCard />
         </main>
         
@@ -57,6 +57,6 @@ export default App;
 Extending classes and creating additional CSS on top of other class CSS
 Animations in React
 
-
+Presets how to set all values and sliders
 
 */
