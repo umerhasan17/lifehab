@@ -1,13 +1,15 @@
 import React from 'react';
 
 import './Card.css';
+import Slider from '../Slider/Slider';
 
 export default class Card extends React.Component {
 
     createSliders() {
-        const sliderArray = this.props.sliders;
-        for (let i = 0; i < sliderArray.length; i ++) {
-            
+        const labels = this.props.sliders;
+        let html;
+        for (let i = 0; i < sliders.length; i ++) {
+            html += <Slider label=`{sliders.entries[i]}` />
         }
     }
 
