@@ -4,13 +4,10 @@ import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Slider from './components/Slider/Slider';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Card from './components/Card/Card';
 import SliderCard from './components/Card/SliderCard';
-
-const Styles = styled.div`
-
-`;
+import CardContainer from './components/CardContainer/CardContainer';
 
 class App extends React.Component {
   state = {
@@ -39,10 +36,7 @@ class App extends React.Component {
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <main style={{marginTop: '64px'}}>
-          <p>Put a bunch of stuff here</p>
-          <Slider label="Light 1"/>
-          <Card title="Light" sliders={{"Light 1" : 0, "Light 2" : 50, "Light 3" : 100}}/>
-          <SliderCard />
+          <CardContainer />
         </main>
         
       </div>
@@ -56,7 +50,5 @@ export default App;
 
 Extending classes and creating additional CSS on top of other class CSS
 Animations in React
-
-Presets how to set all values and sliders
 
 */

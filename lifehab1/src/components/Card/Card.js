@@ -4,13 +4,14 @@ import './Card.css';
 import Slider from '../Slider/Slider';
 
 export default class Card extends React.Component {
-
     createSliders() {
-        const labels = this.props.sliders;
-        let html;
-        for (let i = 0; i < sliders.length; i ++) {
-            html += <Slider label=`{sliders.entries[i]}` />
+        const labels = Object.keys(this.props.sliders);
+        const values = Object.values(this.props.sliders);
+        let slidersJsx = [];
+        for (let i = 0; i < labels.length; i ++) {
+            slidersJsx.push(<Slider label={labels[i]} value={values[i]}/>);
         }
+        return slidersJsx;
     }
 
     render() {
@@ -18,9 +19,8 @@ export default class Card extends React.Component {
             <div className='container'>
                 <div className='card-title'>{this.props.title}</div>
                 <div className='sliders'>
-
+                    {this.createSliders()}
                 </div>
-                <div>This is my card!</div>
             </div>
         )
     }

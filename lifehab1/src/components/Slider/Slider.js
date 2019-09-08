@@ -50,7 +50,7 @@ const Styles = styled.div`
 
 export default class Slider extends React.Component {
   state = {
-    value: 50,
+    value: this.props.value,
   }
 
   handleOnChange = (e) => this.setState({ value: e.target.value })
