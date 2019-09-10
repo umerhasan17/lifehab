@@ -16,7 +16,7 @@ export default class Card extends React.Component {
 
     render() {
         return (
-            <div className='container'>
+            <div className='card-container'>
                 <div className='card-title'>{this.props.title}</div>
                 <div className='sliders'>
                     {this.createSliders()}
