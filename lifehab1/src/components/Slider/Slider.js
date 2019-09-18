@@ -57,11 +57,18 @@ export default class Slider extends React.Component {
 
   render() {
     return (
-      <Styles opacity={this.state.value > this.props.max / 10 ? (this.state.value / this.props.max) : .1} color={this.props.color}>
-        <div className="slider-label">{this.props.label}</div>
-        <input type="range" min={0} max={this.props.max} value={this.state.value} className="slider" onChange={this.handleOnChange} />
-        <div className="value">{this.state.value}</div>
-      </Styles>
+      <div>
+        <Styles opacity={this.state.value > (this.props.max / 10) ? (this.state.value / this.props.max) : .1} color={this.props.color}>
+          <div className="slider-label">{this.props.label}</div>
+          <input type="range" min={0} max={this.props.max} value={this.state.value} className="slider" onChange={this.handleOnChange} />
+          <div className="value">{this.state.value}</div>
+        </Styles>
+        <Styles opacity={this.state.value > 10 ? (this.state.value / 100) : .1} color={this.props.color}>
+          <div className="slider-label">{this.props.label}</div>
+          <input type="range" min={0} max={100} value={this.state.value} className="slider" onChange={this.handleOnChange} />
+          <div className="value">{this.state.value}</div>
+        </Styles>
+      </div>
     )
   }
 }
