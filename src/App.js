@@ -8,6 +8,7 @@ import Slider from './components/Slider/Slider';
 import Card from './components/Card/Card';
 import SliderCard from './components/Card/SliderCard';
 import CardContainer from './components/CardContainer/CardContainer';
+import OnOffSwitch from './components/Switch/Switch';
 
 class App extends React.Component {
   state = {
@@ -37,6 +38,7 @@ class App extends React.Component {
         {backdrop}
         <main style={{marginTop: '64px'}}>
           <CardContainer />
+          <OnOffSwitch />
         </main>
         
       </div>
