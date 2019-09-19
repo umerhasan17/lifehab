@@ -72,3 +72,22 @@ export default class Slider extends React.Component {
     )
   }
 }
+
+/*
+
+  2 LED White Strips 
+  2 LED Red & Blue Strips
+  1 UV tube light ON/OFF
+  NO Light Sensor
+
+  3 Temp Sensors 10-50
+
+  2 Humidity Sensors 0-100
+
+  3 Fans - 0 1 2 3 intensity
+
+  Heater ON/OFF
+
+  MISTING ON/OFF 
+
+*/
