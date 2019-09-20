@@ -1,3 +1,9 @@
-#label-title {
+.switch-label {
+    width: 100%;
+}
+
+.label-title {
     padding-left: 1rem;
+    /* float: right; */
+    vertical-align: middle;
 }
