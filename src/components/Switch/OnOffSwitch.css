@@ -1,9 +1,17 @@
 .switch-label {
     width: 100%;
+    position: relative;
 }
 
 .label-title {
     padding-left: 1rem;
+    font-size: 1.5em;
     /* float: right; */
-    vertical-align: middle;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.label-status {
+    padding-left: 1rem;
 }

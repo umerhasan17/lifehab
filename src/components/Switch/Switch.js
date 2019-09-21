@@ -18,11 +18,11 @@ export default class OnOffSwitch extends Component {
     });
     if (this.state.status === "OFF") {
         this.setState({
-            status: "ON"
+            status: "ON",
         });
     } else {
         this.setState({
-            status: "OFF"
+            status: "OFF",
         });
     }
   }
@@ -31,7 +31,10 @@ export default class OnOffSwitch extends Component {
     return (
       <label className="switch-label">
         <Switch onChange={this.handleChange} checked={this.state.checked} onColor="#006400" uncheckedIcon={false} checkedIcon={true} />
-        <span className="label-title">UV Light {this.state.status}</span>
+        <span className="label-title">
+          <span>UV Light</span>
+          <span className="label-status">{this.state.status}</span>
+        </span>
       </label>
     );
   }
