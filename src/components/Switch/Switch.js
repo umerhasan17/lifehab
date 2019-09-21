@@ -29,9 +29,9 @@ export default class OnOffSwitch extends Component {
  
   render() {
     return (
-      <label class="switch-label">
+      <label className="switch-label">
         <Switch onChange={this.handleChange} checked={this.state.checked} onColor="#006400" uncheckedIcon={false} checkedIcon={true} />
-        <span class="label-title">UV Light {this.state.status}</span>
+        <span className="label-title">UV Light {this.state.status}</span>
       </label>
     );
   }

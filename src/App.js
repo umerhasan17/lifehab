@@ -3,10 +3,10 @@ import React from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
-import Slider from './components/Slider/Slider';
+// import Slider from './components/Slider/Slider';
 // import styled from 'styled-components';
-import Card from './components/Card/Card';
-import SliderCard from './components/Card/SliderCard';
+// import Card from './components/Card/Card';
+// import SliderCard from './components/Card/SliderCard';
 import CardContainer from './components/CardContainer/CardContainer';
 import OnOffSwitch from './components/Switch/Switch';
 
