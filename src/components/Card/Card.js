@@ -9,7 +9,7 @@ export default class Card extends React.Component {
         const values = Object.values(this.props.sliders);
         let slidersJsx = [];
         for (let i = 0; i < labels.length; i ++) {
-            slidersJsx.push(<Slider label={labels[i]} value={values[i]}/>);
+            slidersJsx.push(<Slider max={10} label={labels[i]} value={values[i]}/>);
         }
         return slidersJsx;
     }

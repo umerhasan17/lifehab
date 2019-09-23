@@ -51,21 +51,18 @@ const Styles = styled.div`
 export default class Slider extends React.Component {
   state = {
     value: this.props.value,
+    max: this.props.max ? this.props.max : 100,
   }
 
   handleOnChange = (e) => this.setState({ value: e.target.value })
 
   render() {
+    
     return (
       <div>
-        <Styles opacity={this.state.value > (this.props.max / 10) ? (this.state.value / this.props.max) : .1} color={this.props.color}>
+        <Styles color={this.props.color}>
           <div className="slider-label">{this.props.label}</div>
           <input type="range" min={0} max={this.props.max} value={this.state.value} className="slider" onChange={this.handleOnChange} />
-          <div className="value">{this.state.value}</div>
-        </Styles>
-        <Styles opacity={this.state.value > 10 ? (this.state.value / 100) : .1} color={this.props.color}>
-          <div className="slider-label">{this.props.label}</div>
-          <input type="range" min={0} max={100} value={this.state.value} className="slider" onChange={this.handleOnChange} />
           <div className="value">{this.state.value}</div>
         </Styles>
       </div>
@@ -81,13 +78,10 @@ export default class Slider extends React.Component {
   NO Light Sensor
 
   3 Temp Sensors 10-50
-
-  2 Humidity Sensors 0-100
-
-  3 Fans - 0 1 2 3 intensity
-
   Heater ON/OFF
 
-  MISTING ON/OFF 
+  MISTING ON/OFF
+  2 Humidity Sensors 0-100
+  3 Fans - 0 1 2 3 intensity
 
 */

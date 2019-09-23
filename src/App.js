@@ -9,6 +9,7 @@ import Backdrop from './components/Backdrop/Backdrop';
 // import SliderCard from './components/Card/SliderCard';
 import CardContainer from './components/CardContainer/CardContainer';
 import OnOffSwitch from './components/Switch/Switch';
+import LightingPanel from './components/LightingPanel/LightingPanel';
 
 class App extends React.Component {
   state = {
@@ -39,6 +40,7 @@ class App extends React.Component {
         <main style={{marginTop: '64px'}}>
           <CardContainer />
           <OnOffSwitch />
+          <LightingPanel />
         </main>
         
       </div>

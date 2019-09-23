@@ -13,10 +13,11 @@ const statusArr = [
 ];
 
 export default class OnOffSwitch extends Component {
-  constructor() {
-    super(); 
+  constructor(props) {
+    super(props); 
     
     this.state = { 
+        label: this.props && this.props.label ? this.props.label : "Unlabelled",  
         checked: false,
         index: 0,
         selected: statusArr[0],
@@ -41,7 +42,7 @@ export default class OnOffSwitch extends Component {
       <label className="switch-label">
         <Switch onChange={this.handleChange} checked={this.state.checked} onColor="#006400" uncheckedIcon={false} checkedIcon={true} />
         <span className="label-title">
-          <span>UV Light</span>
+          <span>{this.state.label}</span>
           <span className="label-status">{this.state.selected.status}</span>
         </span>
       </label>
