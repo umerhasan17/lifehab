@@ -5,6 +5,7 @@ import OnOffSwitch from '../Switch/Switch';
 
 export default class LightingPanel extends React.Component {
     state = {
+        title: "Lighting",
         whites: this.props.whites ? this.props.whites : 2,
         reds: this.props.reds ? this.props.reds : 1,
         blues: this.props.blues ? this.props.blues : 1,
@@ -39,7 +40,7 @@ export default class LightingPanel extends React.Component {
     render() {
         return (
             <div className='card-container'>
-                <div className='card-title'>{this.props.title}</div>
+                <div className='card-title'>{this.state.title}</div>
                 <div className='sliders'>
                     {this.createSliders()}
                     <OnOffSwitch label={"UV Light"} />
