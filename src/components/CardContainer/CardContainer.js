@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from '../Card/Card';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './CardContainer.css';
 
 export default class CardContainer extends React.Component {

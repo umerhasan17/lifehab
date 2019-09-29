@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './SensorReading.css';
 
 export default class SensorReading extends Component {
   constructor(props) {
