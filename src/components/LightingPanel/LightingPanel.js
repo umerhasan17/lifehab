@@ -33,7 +33,7 @@ export default class LightingPanel extends React.Component {
 
     createSlider(colour, number) {
         return (
-            <Slider max={this.state.max} label={`${colour} LED ${number + 1}`} value={this.state.max / 2}/>
+            <Slider max={this.state.max} label={`${colour} ${number + 1}`} value={0}/>
         )
     }
 

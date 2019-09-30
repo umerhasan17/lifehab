@@ -49,15 +49,15 @@ class App extends React.Component {
                 <LightingPanel />
               </Col>
               <Col>
-                <TemperaturePanel />
+                <HumidityPanel />
               </Col>
             </Row>
             <Row>
               <Col>
-                <WaterPanel />
+                <TemperaturePanel />
               </Col>
               <Col>
-                <HumidityPanel />
+                <WaterPanel />
               </Col>
             </Row>
           </Container>
