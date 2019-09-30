@@ -10,6 +10,7 @@ import Card from './components/Card/Card';
 import LightingPanel from './components/LightingPanel/LightingPanel';
 import TemperaturePanel from './components/TemperaturePanel/TemperaturePanel';
 import HumidityPanel from './components/HumidityPanel/HumidityPanel';
+import WaterPanel from './components/WaterPanel/WaterPanel';
 
 import './components/CardContainer/CardContainer.css';
 
@@ -46,28 +47,17 @@ class App extends React.Component {
             <Row>
               <Col>
                 <LightingPanel />
-                {/* <Card title='Light' max={100} sliders={{'Light 1' : 0, 'Light 2' : 50, 'Light 3' : 100}}/> */}
               </Col>
               <Col>
                 <TemperaturePanel />
-                {/* <Card title='Temperature' max={50} sliders={{'Temp 1':20, 'Temp 2': 30, 'Temp 3': 25}}/>  */}
               </Col>
             </Row>
             <Row>
               <Col>
-                <Card title='Water' max={40} sliders={{'Water 1':20, 'Water 2': 30}}/>
+                <WaterPanel />
               </Col>
               <Col>
                 <HumidityPanel />
-                {/* <Card title='Humidity' max={100} sliders={{'Humidity 1': 90}} /> */}
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Card title='Fan' max={3} sliders={{'Fan 1':2}}/>
-              </Col>
-              <Col>
-                <p>Thoughts about water pressure</p>
               </Col>
             </Row>
           </Container>
