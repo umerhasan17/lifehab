@@ -17,7 +17,6 @@ const sliderThumbStyles = (props) => (`
 const Styles = styled.div`
   display: flex;
   align-items: center;
-  color: #555;
   margin-top: 2rem;
   margin-bottom: 2rem;
   .value {
@@ -25,7 +24,7 @@ const Styles = styled.div`
     font-size: 1.5rem;
   }
   .slider-label {
-    font-size: 1.3rem;
+    font-size: 1.2em;
     
   }
   .slider {

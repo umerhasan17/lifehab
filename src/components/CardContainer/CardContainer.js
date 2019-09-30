@@ -34,11 +34,6 @@ export default class CardContainer extends React.Component {
                         <p>Add on off switches for lights</p>
                     </Col>
                 </Row>
-                <Row>
-                    <p>Thoughts about water pressure</p>
-                    <p>Add on off switches here</p> 
-                    
-                </Row>
             </Container>
         );
     }
