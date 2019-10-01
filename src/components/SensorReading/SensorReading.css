@@ -1,7 +1,9 @@
 .sensor-reading-label {
     font-size: 1.2em;
+    text-align: center;
 }
 
 .sensor-reading-value {
     font-size: 4em;
+    text-align: center;
 }

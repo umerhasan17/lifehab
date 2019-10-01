@@ -25,7 +25,7 @@ const Styles = styled.div`
   }
   .slider-label {
     font-size: 1.2em;
-    
+    width: 70px;
   }
   .slider {
     flex: 6;
@@ -56,7 +56,6 @@ export default class Slider extends React.Component {
   handleOnChange = (e) => this.setState({ value: e.target.value })
 
   render() {
-    
     return (
       <div>
         <Styles color={this.props.color}>

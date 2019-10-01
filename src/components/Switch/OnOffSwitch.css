@@ -1,6 +1,7 @@
 .switch-label {
     width: 100%;
     position: relative;
+    padding-left: 2%;
 }
 
 .label-title {
