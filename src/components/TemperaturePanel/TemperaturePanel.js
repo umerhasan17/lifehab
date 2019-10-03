@@ -20,10 +20,10 @@ export default class TemperaturePanel extends React.Component {
             <Container className="temp-sensors-readings">
                 <Row>
                     <Col>
-                        <SensorReading label="Air (°C)" value="35.5"/>
+                        <SensorReading label="Air (°C)" value={this.props.air}/>
                     </Col>
                     <Col>
-                        <SensorReading label="Water (°C)" value="21.0"/>
+                        <SensorReading label="Water (°C)" value={this.props.water}/>
                     </Col>
                 </Row>
             </Container>

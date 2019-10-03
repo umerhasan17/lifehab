@@ -36,10 +36,10 @@ export default class HumidityPanel extends React.Component {
                 <Container>
                     <Row>
                         <Col>
-                            <SensorReading label="Air (%)" value="90"/>
+                            <SensorReading label="Air (%)" value={this.props.air}/>
                         </Col>
                         <Col>
-                            <SensorReading label="Soil (%)" value="75"/>
+                            <SensorReading label="Soil (%)" value={this.props.soil}/>
                         </Col>
                     </Row>
                 </Container>

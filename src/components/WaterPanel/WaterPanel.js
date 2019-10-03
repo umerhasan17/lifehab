@@ -17,10 +17,10 @@ export default class WaterPanel extends React.Component {
                 <Container>
                     <Row>
                         <Col>
-                            <SensorReading label="Sump 1 (kPa)" value="102"/>
+                            <SensorReading label="Sump 1 (kPa)" value={this.props.sump1}/>
                         </Col>
                         <Col>
-                            <SensorReading label="Sump 2 (kPa)" value="103"/>
+                            <SensorReading label="Sump 2 (kPa)" value={this.props.sump2}/>
                         </Col>
                     </Row>
                 </Container>
