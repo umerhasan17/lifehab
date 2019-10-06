@@ -16,7 +16,34 @@ import './components/CardContainer/CardContainer.css';
 
 class App extends React.Component {
   state = {
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
+    json: {
+      humidity: {
+        f1: 0,
+        f2: 1, 
+        f3: 2,
+        h1: 56,
+        h2: 89,
+        misting: 1,
+      },
+      light: {
+        b1: 0,
+        r1: 3,
+        uv: 1,
+        w1: 7,
+        w2: 8,
+      },
+      temp: {
+        heater: 0,
+        t1: 15,
+        t2: 48,
+        t3: 33,
+      },
+      water: {
+        p1: 103,
+        p2: 102,
+      },
+    },
   };
 
   drawerToggleClickHandler = () => {
@@ -31,7 +58,7 @@ class App extends React.Component {
 
   render() {
     let backdrop;
-
+    let json = this.state.json;
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler} />
     }
@@ -46,18 +73,39 @@ class App extends React.Component {
           <Container style={{marginLeft: 0, marginRight: 0}}>
             <Row>
               <Col>
-                <LightingPanel />
+                <LightingPanel 
+                b1={json.light.b1}
+                r1={json.light.r1}
+                uv={json.light.uv}
+                w1={json.light.w1}
+                w2={json.light.w2}
+                />
               </Col>
               <Col>
-                <HumidityPanel />
+                <HumidityPanel 
+                misting={json.humidity.misting}
+                f1={json.humidity.f1}
+                f2={json.humidity.f2}
+                f3={json.humidity.f3}
+                h1={json.humidity.h1.toString() + '%'} 
+                h2={json.humidity.h2.toString() + '%'}
+                />
               </Col>
             </Row>
             <Row>
               <Col>
-                <TemperaturePanel />
+                <TemperaturePanel
+                heater={json.temp.heater}
+                t1={json.temp.t1}
+                t2={json.temp.t2}
+                t3={json.temp.t3}
+                />
               </Col>
               <Col>
-                <WaterPanel />
+                <WaterPanel 
+                p1={json.water.p1} 
+                p2={json.water.p2}
+                />
               </Col>
             </Row>
           </Container>
