@@ -45,5 +45,28 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA_3uC5GOWggCu4PNaCQvB5H3kFWk9hPiU",
+        authDomain: "lifehab-802cb.firebaseapp.com",
+        databaseURL: "https://lifehab-802cb.firebaseio.com",
+        projectId: "lifehab-802cb",
+        storageBucket: "lifehab-802cb.appspot.com",
+        messagingSenderId: "865161340730",
+        appId: "1:865161340730:web:3e69e74e30df2ca9731203",
+        measurementId: "G-QX51XBZWDX"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
