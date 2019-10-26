@@ -2,7 +2,8 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import * as firebase from 'firebase';
+import Firebase from 'firebase';
+import config from './config';
 
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -46,6 +47,11 @@ class App extends React.Component {
       },
     },
   };
+
+  constructor(props) {
+    super(props);
+    Firebase.initializeApp(config.firebase);
+  }
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
