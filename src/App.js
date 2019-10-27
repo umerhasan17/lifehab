@@ -21,7 +21,7 @@ class App extends React.Component {
     sideDrawerOpen: false,
     json: {
       humidity: {
-        f1: 0,
+        f1: 3,
         f2: 1, 
         f3: 2,
         h1: 56,
@@ -51,6 +51,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     Firebase.initializeApp(config.firebase);
+  }
+
+  componentDidMount() {
+    const rootRef = Firebase.database().ref().child('testJson');
+    const f1Ref = rootRef.child('humidity').child('f1');
+    f1Ref.on('value', snap => {
+      this.setState(prevState => ({
+        ...prevState,
+        json: {
+          ...prevState.json,
+          humidity: {
+            ...prevState.json.humidity,
+            f1: snap.val()
+          }
+        }
+      }))
+    });
   }
 
   drawerToggleClickHandler = () => {
