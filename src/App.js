@@ -2,8 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Firebase from 'firebase';
-import config from './config';
+import * as firebase from 'firebase';
 
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -48,13 +47,13 @@ class App extends React.Component {
     },
   };
 
-  constructor(props) {
-    super(props);
-    Firebase.initializeApp(config.firebase);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   Firebase.initializeApp(config.firebase);
+  // }
 
-  componentDidMount() {
-    const rootRef = Firebase.database().ref().child('testJson');
+  componentDidUpdate() {
+    const rootRef = firebase.database().ref().child('testJson');
     const f1Ref = rootRef.child('humidity').child('f1');
     f1Ref.on('value', snap => {
       this.setState(prevState => ({
