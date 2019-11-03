@@ -32,7 +32,6 @@ class App extends React.Component {
         heater: 0,
         t1: 15,
         t2: 48,
-        t3: 33,
       },
       water: {
         p1: 103,

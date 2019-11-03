@@ -6,34 +6,22 @@ import OnOffSwitch from '../Switch/Switch';
 export default class LightingPanel extends React.Component {
     state = {
         title: "Lighting",
-        whites: this.props.whites ? this.props.whites : 2,
-        reds: this.props.reds ? this.props.reds : 1,
-        blues: this.props.blues ? this.props.blues : 1,
-        uv: this.props.uv ? this.props.uv : 1,
-        sensor: this.props.sensor ? this.props.sensor : 0,
         max: 10,
+        b1: this.props.b1 ? this.props.b1 : 0,
+        r1: this.props.r1 ? this.props.r1 : 0,
+        uv: this.props.uv ? this.props.uv : 0, 
+        w1: this.props.w1 ? this.props.w1 : 0, 
+        w2: this.props.w2 ? this.props.w2 : 0,
     }
 
     createSliders() {
-        // create whites
-        let slidersJsx = [];
-        for (let i = 0; i < this.state.whites; i ++) {
-            slidersJsx.push(this.createSlider("White", i));
-        }
-        // create reds
-        for (let i = 0; i < this.state.reds; i ++) {
-            slidersJsx.push(this.createSlider("Red", i));
-        }
-        // create blues
-        for (let i = 0; i < this.state.blues; i ++) {
-            slidersJsx.push(this.createSlider("Blue", i));
-        }
-        return slidersJsx;
-    }
-
-    createSlider(colour, number) {
         return (
-            <Slider max={this.state.max} label={`${colour} ${number + 1}`} value={0}/>
+            <div>            
+                <Slider max={this.state.max} label={`White ${1}`} value={this.state.w1}/>
+                <Slider max={this.state.max} label={`White ${2}`} value={this.state.w2}/>
+                <Slider max={this.state.max} label={`Red ${1}`} value={this.state.r1}/>
+                <Slider max={this.state.max} label={`Blue ${1}`} value={this.state.b1}/>
+            </div>
         )
     }
 
@@ -43,7 +31,7 @@ export default class LightingPanel extends React.Component {
                 <div className='card-title'>{this.state.title}</div>
                 <div className='sliders'>
                     {this.createSliders()}
-                    <OnOffSwitch label={"UV Light"} />
+                    <OnOffSwitch label={"UV Light"} value={this.state.uv} />
                 </div>
             </div>
         )
@@ -51,10 +39,8 @@ export default class LightingPanel extends React.Component {
 }
 
 /* 
-
   2 LED White Strips 
   2 LED Red & Blue Strips
   1 UV tube light ON/OFF
   NO Light Sensor
-
 */ 
