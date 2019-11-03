@@ -1,12 +1,7 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import * as firebase from 'firebase';
 
 import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
 import Card from './components/Card/Card';
 import LightingPanel from './components/LightingPanel/LightingPanel';
 import TemperaturePanel from './components/TemperaturePanel/TemperaturePanel';
@@ -17,7 +12,6 @@ import './components/CardContainer/CardContainer.css';
 
 class App extends React.Component {
   state = {
-    sideDrawerOpen: false,
     json: {
       humidity: {
         f1: 3,
@@ -69,68 +63,53 @@ class App extends React.Component {
     });
   }
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
-
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
-  };
-
   render() {
-    let backdrop;
     let json = this.state.json;
-    if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />
-    }
     return (
       <div>
-        {/*  Nav-bar section */}
+        {/* navbar */}
         <Toolbar />
-        <main>
-          {/* Card Container Section */}
-          <Container className="container">
-            <Row>
-              <Col>
-                <LightingPanel 
-                b1={json.light.b1}
-                r1={json.light.r1}
-                uv={json.light.uv}
-                w1={json.light.w1}
-                w2={json.light.w2}
-                />
-              </Col>
-              <Col>
-                <HumidityPanel 
-                misting={json.humidity.misting}
-                f1={json.humidity.f1}
-                f2={json.humidity.f2}
-                f3={json.humidity.f3}
-                h1={json.humidity.h1.toString() + '%'} 
-                h2={json.humidity.h2.toString() + '%'}
-                />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <TemperaturePanel
-                heater={json.temp.heater}
-                t1={json.temp.t1}
-                t2={json.temp.t2}
-                t3={json.temp.t3}
-                />
-              </Col>
-              <Col>
-                <WaterPanel 
-                p1={json.water.p1} 
-                p2={json.water.p2}
-                />
-              </Col>
-            </Row>
-          </Container>
-        </main>
+        
+        {/* Card container */}
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <LightingPanel 
+              b1={json.light.b1}
+              r1={json.light.r1}
+              uv={json.light.uv}
+              w1={json.light.w1}
+              w2={json.light.w2}
+              />
+            </div>
+            <div className="col">
+              <HumidityPanel 
+              misting={json.humidity.misting}
+              f1={json.humidity.f1}
+              f2={json.humidity.f2}
+              f3={json.humidity.f3}
+              h1={json.humidity.h1.toString() + '%'} 
+              h2={json.humidity.h2.toString() + '%'}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <TemperaturePanel
+              heater={json.temp.heater}
+              t1={json.temp.t1}
+              t2={json.temp.t2}
+              t3={json.temp.t3}
+              />
+            </div>
+            <div className="col">
+              <WaterPanel 
+              p1={json.water.p1} 
+              p2={json.water.p2}
+              />
+            </div>
+          </div>
+        </div>
         
       </div>
     );

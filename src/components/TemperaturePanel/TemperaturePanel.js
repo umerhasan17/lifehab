@@ -1,8 +1,5 @@
 import React from 'react';
 import OnOffSwitch from '../Switch/Switch';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import '../Card/Card.css';
 import './TemperaturePanel.css';
 import SensorReading from '../SensorReading/SensorReading';
@@ -17,16 +14,10 @@ export default class TemperaturePanel extends React.Component {
 
     createSensorReadings() {
         return (
-            <Container className="temp-sensors-readings">
-                <Row>
-                    <Col>
-                        <SensorReading label="Air (°C)" value={this.props.t1}/>
-                    </Col>
-                    <Col>
-                        <SensorReading label="Water (°C)" value={this.props.t2}/>
-                    </Col>
-                </Row>
-            </Container>
+            <React.Fragment>
+                <SensorReading label="Air (°C)" value={this.props.t1}/>
+                <SensorReading label="Water (°C)" value={this.props.t2}/>
+            </React.Fragment>
         );
     }
 
@@ -34,10 +25,10 @@ export default class TemperaturePanel extends React.Component {
         return (
             <div className='card-container'>
                 <div className='card-title'>{this.state.title}</div>
-                <div className='readings'>
-                    {this.createSensorReadings()}
+                {this.createSensorReadings()}
+                <div className='sliders'>
+                    <OnOffSwitch label={"Deep Heat Projector"} value={this.props.heater}/>
                 </div>
-                <OnOffSwitch label={"Deep Heat Projector"} value={this.props.heater}/>
             </div>
         )
     }
