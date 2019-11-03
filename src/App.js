@@ -88,12 +88,10 @@ class App extends React.Component {
     return (
       <div>
         {/*  Nav-bar section */}
-        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
-        {backdrop}
+        <Toolbar />
         <main>
           {/* Card Container Section */}
-          <Container>
+          <Container className="container">
             <Row>
               <Col>
                 <LightingPanel 
