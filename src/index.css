@@ -42,15 +42,18 @@ div.container {
   padding-bottom: 1rem;
   overflow: hidden;
 }
-
 /* card rows */
-div.container > div.card-container {
-  width: calc(50% - 0.75rem);
+div.container > div.col > div.card-container {
+  width: 100%;
   display: block;
   float: left;
   margin-bottom: 1.5rem;
 }
-
-div.container > div.card-container:nth-child(odd) {
+div.container > div.col {
+  display: block;
+  float: left;
+  width: calc(50% - 0.75rem);
+}
+div.container > div.col:first-child {
   margin-right: 1.5rem;
 }
