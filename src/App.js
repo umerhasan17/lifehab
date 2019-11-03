@@ -2,7 +2,6 @@ import React from 'react';
 import * as firebase from 'firebase';
 
 import Toolbar from './components/Toolbar/Toolbar';
-import Card from './components/Card/Card';
 import LightingPanel from './components/LightingPanel/LightingPanel';
 import TemperaturePanel from './components/TemperaturePanel/TemperaturePanel';
 import HumidityPanel from './components/HumidityPanel/HumidityPanel';
