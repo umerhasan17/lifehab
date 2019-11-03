@@ -57,3 +57,19 @@ div.container > div.col {
 div.container > div.col:first-child {
   margin-right: 1.5rem;
 }
+
+/* app container mobile */
+@media only screen and (max-width: 1050px) {
+  div.container {
+    padding: 2.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  div.container > div.col {
+    margin-right: 0 !important;
+    width: 100%;
+  }
+  div.container > div.col:last-child > div.card-container:last-child {
+    margin-bottom: 0 !important;
+  }
+}
