@@ -1,8 +1,5 @@
 import React from 'react';
 import '../Card/Card.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import SensorReading from '../SensorReading/SensorReading';
 
 export default class WaterPanel extends React.Component {
@@ -14,16 +11,8 @@ export default class WaterPanel extends React.Component {
         return (
             <div className='card-container'>
                 <div className='card-title'>{this.state.title}</div>
-                <Container>
-                    <Row>
-                        <Col>
-                            <SensorReading label="Sump 1 (kPa)" value={this.props.p1}/>
-                        </Col>
-                        <Col>
-                            <SensorReading label="Sump 2 (kPa)" value={this.props.p2}/>
-                        </Col>
-                    </Row>
-                </Container>
+                <SensorReading label="Sump 1 (kPa)" value={this.props.p1}/>
+                <SensorReading label="Sump 2 (kPa)" value={this.props.p2}/>
             </div>
         )
     }

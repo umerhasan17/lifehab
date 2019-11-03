@@ -2,9 +2,6 @@ import React from 'react';
 import '../Card/Card.css';
 import Slider from '../Slider/Slider';
 import OnOffSwitch from '../Switch/Switch';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import SensorReading from '../SensorReading/SensorReading';
 
 export default class HumidityPanel extends React.Component {
@@ -33,16 +30,8 @@ export default class HumidityPanel extends React.Component {
         return (
             <div className='card-container'>
                 <div className='card-title'>{this.state.title}</div>
-                <Container>
-                    <Row>
-                        <Col>
-                            <SensorReading label="Air (%)" value={this.props.air}/>
-                        </Col>
-                        <Col>
-                            <SensorReading label="Soil (%)" value={this.props.soil}/>
-                        </Col>
-                    </Row>
-                </Container>
+                <SensorReading label="Air (%)" value={this.props.air}/>
+                <SensorReading label="Soil (%)" value={this.props.soil}/>
                 <div className='sliders'>
                     {this.createSliders()}
                     <OnOffSwitch label={"Misting"} />

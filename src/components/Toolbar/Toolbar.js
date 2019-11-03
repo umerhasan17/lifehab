@@ -1,24 +1,20 @@
 import React from 'react';
 
-import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import LogoIcon from '../LogoIcon/LogoIcon';
 import './Toolbar.css';
 
-const toolbar = props => (
-  <header className="toolbar">
-    <nav className="toolbar__navigation">
-        <div className="toolbar__toggle-button">
-            <DrawerToggleButton click={props.drawerClickHandler} />
-        </div>
-        <div className="toolbar__logo"><a href="/">MY LIFEHAB</a></div>
-        <div className="spacer" />
-        <div className="toolbar_navigation-items">
-            <ul>
-                <li><a href="/">LifeHab</a></li>
-                <li><a href="/">Live Feed</a></li>
-            </ul>
-        </div>
-    </nav>
-  </header>
+const Toolbar = props => (
+  <nav className="toolbar">
+    <a className="logo_title" href="/">
+      <LogoIcon />
+      <p>My LifeHab</p>
+    </a>
+    
+    <ul className="links">
+      <a href="/" className="active">Dashboard</a
+      ><a href="/">Live Feed</a>
+    </ul>
+  </nav>
 );
 
-export default toolbar;
+export default Toolbar;
