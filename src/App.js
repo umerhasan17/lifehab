@@ -32,7 +32,6 @@ class App extends React.Component {
         heater: 0,
         t1: 15,
         t2: 48,
-        t3: 33,
       },
       water: {
         p1: 103,
@@ -99,7 +98,6 @@ class App extends React.Component {
               heater={json.temp.heater}
               t1={json.temp.t1}
               t2={json.temp.t2}
-              t3={json.temp.t3}
               />
             </div>
             <div className="col">
