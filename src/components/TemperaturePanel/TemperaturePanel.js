@@ -9,9 +9,6 @@ export default class TemperaturePanel extends React.Component {
         super(props);
         this.state = {
             title: "Temperature",
-            heater: this.props.heater ? this.props.heater : 0,
-            t1: this.props.t1 ? this.props.t1 : 0,
-            t2: this.props.t2 ? this.props.t2 : 0,
         }
     }
 
