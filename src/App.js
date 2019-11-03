@@ -2,7 +2,7 @@ import React from 'react';
 import * as firebase from 'firebase';
 
 import Toolbar from './components/Toolbar/Toolbar';
-import Card from './components/Card/Card';
+import Footer from './components/Footer/Footer';
 import LightingPanel from './components/LightingPanel/LightingPanel';
 import TemperaturePanel from './components/TemperaturePanel/TemperaturePanel';
 import HumidityPanel from './components/HumidityPanel/HumidityPanel';
@@ -72,45 +72,35 @@ class App extends React.Component {
         
         {/* Card container */}
         <div className="container">
-          <div className="row">
-            <div className="col">
-              <LightingPanel 
-              b1={json.light.b1}
-              r1={json.light.r1}
-              uv={json.light.uv}
-              w1={json.light.w1}
-              w2={json.light.w2}
-              />
-            </div>
-            <div className="col">
-              <HumidityPanel 
-              misting={json.humidity.misting}
-              f1={json.humidity.f1}
-              f2={json.humidity.f2}
-              f3={json.humidity.f3}
-              h1={json.humidity.h1.toString() + '%'} 
-              h2={json.humidity.h2.toString() + '%'}
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <TemperaturePanel
-              heater={json.temp.heater}
-              t1={json.temp.t1}
-              t2={json.temp.t2}
-              t3={json.temp.t3}
-              />
-            </div>
-            <div className="col">
-              <WaterPanel 
-              p1={json.water.p1} 
-              p2={json.water.p2}
-              />
-            </div>
-          </div>
+          <LightingPanel 
+          b1={json.light.b1}
+          r1={json.light.r1}
+          uv={json.light.uv}
+          w1={json.light.w1}
+          w2={json.light.w2}
+          />
+          <HumidityPanel 
+          misting={json.humidity.misting}
+          f1={json.humidity.f1}
+          f2={json.humidity.f2}
+          f3={json.humidity.f3}
+          h1={json.humidity.h1.toString() + '%'} 
+          h2={json.humidity.h2.toString() + '%'}
+          />
+          <TemperaturePanel
+          heater={json.temp.heater}
+          t1={json.temp.t1}
+          t2={json.temp.t2}
+          t3={json.temp.t3}
+          />
+          <WaterPanel 
+          p1={json.water.p1} 
+          p2={json.water.p2}
+          />
         </div>
         
+        {/* footer */}
+        <Footer />
       </div>
     );
   }
