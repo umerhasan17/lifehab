@@ -38,8 +38,8 @@ body {
 /* app container */
 div.container {
   width: 100%;
-  padding: 3.5rem calc((100% - var(--container-width)) / 2);
-  padding-bottom: 1.5rem;
+  padding: 2.5rem calc((100% - var(--container-width)) / 2);
+  padding-bottom: 1rem;
   overflow: hidden;
 }
 
