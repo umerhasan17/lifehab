@@ -87,8 +87,8 @@ class App extends React.Component {
               f1={json.humidity.f1}
               f2={json.humidity.f2}
               f3={json.humidity.f3}
-              h1={json.humidity.h1.toString() + '%'} 
-              h2={json.humidity.h2.toString() + '%'}
+              h1={json.humidity.h1}
+              h2={json.humidity.h2}
               />
             </div>
           </div>

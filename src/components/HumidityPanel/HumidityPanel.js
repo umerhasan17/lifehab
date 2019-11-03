@@ -7,22 +7,16 @@ import SensorReading from '../SensorReading/SensorReading';
 export default class HumidityPanel extends React.Component {
     state = {
         title: "Humidity",
-        fans: 3,
         max: 3,
     }
 
     createSliders() {
-        // create whites
-        let slidersJsx = [];
-        for (let i = 0; i < this.state.fans; i ++) {
-            slidersJsx.push(this.createSlider("Fan", i));
-        }
-        return slidersJsx;
-    }
-
-    createSlider(colour, number) {
         return (
-            <Slider max={this.state.max} label={`${colour} ${number + 1}`} value={0}/>
+            <div>
+                <Slider max={this.state.max} label={`Fan 1`} value={this.props.f1}/>
+                <Slider max={this.state.max} label={`Fan 2`} value={this.props.f2}/>
+                <Slider max={this.state.max} label={`Fan 3`} value={this.props.f3}/>
+            </div>
         )
     }
 
@@ -30,11 +24,11 @@ export default class HumidityPanel extends React.Component {
         return (
             <div className='card-container'>
                 <div className='card-title'>{this.state.title}</div>
-                <SensorReading label="Air (%)" value={this.props.air}/>
-                <SensorReading label="Soil (%)" value={this.props.soil}/>
+                <SensorReading label="Air (%)" value={this.props.h1}/>
+                <SensorReading label="Soil (%)" value={this.props.h2}/>
                 <div className='sliders'>
                     {this.createSliders()}
-                    <OnOffSwitch label={"Misting"} />
+                    <OnOffSwitch label={"Misting"} value={this.props.misting}/>
                 </div>
             </div>
         )
