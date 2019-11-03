@@ -1,18 +1,25 @@
 .switch-label {
-    width: 100%;
-    position: relative;
-    padding-left: 2%;
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+}
+.switch-label > * {
+    display: inline-block;
+    vertical-align: text-top;
+}
+.react-switch-handle {
+    box-shadow: none !important;
+}
+
+.label-title, .label-status {
+    line-height: 28px;
+    font-size: 1.125rem;
 }
 
 .label-title {
-    padding-left: 1rem;
-    font-size: 1.5em;
-    /* float: right; */
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
+    padding-right: 1rem;
 }
-
 .label-status {
     padding-left: 1rem;
+    font-family: "Fira Mono", monospace;
 }

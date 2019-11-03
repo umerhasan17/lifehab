@@ -24,7 +24,11 @@ export default class OnOffSwitch extends Component {
 
   createLabel() {
     if (this.state.checked) {
-      return "ON";
+      return (
+        <>
+          ON&nbsp;
+        </>
+      );
     } else {
       return "OFF";
     }
@@ -33,11 +37,9 @@ export default class OnOffSwitch extends Component {
   render() {
     return (
       <label className="switch-label">
-        <Switch onChange={this.handleChange} checked={this.state.checked} onColor="#006400" uncheckedIcon={false} checkedIcon={true} />
-        <span className="label-title">
-          <span>{this.state.label}</span>
-          <span className="label-status">{this.createLabel()}</span>
-        </span>
+        <span className="label-title">{this.state.label}</span>
+        <Switch onChange={this.handleChange} checked={this.state.checked} onColor="#2ecc71" uncheckedIcon={false} checkedIcon={true} />
+        <span className="label-status">{this.createLabel()}</span>
       </label>
     );
   }
