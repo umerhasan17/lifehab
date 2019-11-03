@@ -86,14 +86,14 @@ class App extends React.Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (
-      <div style={{height: '100%'}}>
+      <div>
         {/*  Nav-bar section */}
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <main style={{marginTop: '64px'}}>
+        <main>
           {/* Card Container Section */}
-          <Container style={{marginLeft: 0, marginRight: 0}}>
+          <Container>
             <Row>
               <Col>
                 <LightingPanel 
