@@ -2,6 +2,20 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700,800,900&display=swap');
 
 /* default styles */
+:root {
+	--theme-color: #20bf6b;
+	
+	--shadow-color: rgba(38,50,56,0.2);
+
+	--light-color: #CFD8DC;
+    --lighter-color: #ECEFF1;
+    --medium-color: #B0BEC5;
+
+    --text-color: #455A64;
+    --dark-text-color: #37474F;    
+    --lighter-text-color: #90A4AE;
+}
+
 * {
   margin: 0;
   padding: 0;
