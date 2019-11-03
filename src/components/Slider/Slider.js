@@ -19,7 +19,6 @@ const Styles = styled.div`
   align-items: center;
   margin: 1.25rem 0;
   .value {
-    flex: 0.75;
     font-size: 1.35rem;
     font-family: "Fira Mono", monospace;
   }
@@ -33,6 +32,7 @@ const Styles = styled.div`
     width: 100%;
     height: 14px;
     margin: 0 1.25rem;
+    margin-left: 0.75rem;
     border-radius: 5px;
     background: var(--lighter-color);
     outline: none;

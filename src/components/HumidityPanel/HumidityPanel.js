@@ -12,11 +12,11 @@ export default class HumidityPanel extends React.Component {
 
     createSliders() {
         return (
-            <div>
+            <React.Fragment>
                 <Slider max={this.state.max} label={`Fan 1`} value={this.props.f1}/>
                 <Slider max={this.state.max} label={`Fan 2`} value={this.props.f2}/>
                 <Slider max={this.state.max} label={`Fan 3`} value={this.props.f3}/>
-            </div>
+            </React.Fragment>
         )
     }
 

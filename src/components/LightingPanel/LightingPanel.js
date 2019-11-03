@@ -16,12 +16,12 @@ export default class LightingPanel extends React.Component {
 
     createSliders() {
         return (
-            <div>            
+            <React.Fragment>            
                 <Slider max={this.state.max} label={`White ${1}`} value={this.state.w1}/>
                 <Slider max={this.state.max} label={`White ${2}`} value={this.state.w2}/>
                 <Slider max={this.state.max} label={`Red ${1}`} value={this.state.r1}/>
                 <Slider max={this.state.max} label={`Blue ${1}`} value={this.state.b1}/>
-            </div>
+            </React.Fragment>
         )
     }
 

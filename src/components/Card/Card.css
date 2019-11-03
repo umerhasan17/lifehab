@@ -14,7 +14,7 @@
     padding: 0.5rem 0;
     text-align: center;
     letter-spacing: -.025rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     border-bottom: 1px solid var(--light-color);
 }
 
@@ -28,5 +28,19 @@
 .card-container > div.readings > div.sensor-reading {
     display: inline-block;
     margin: 0 2rem;
-    margin-top: 1rem;
+    padding-top: 1.5rem;
+}
+
+/* card sliders */
+.card-container > div.sliders {
+    padding-top: 1.5rem;
+    overflow: hidden;
+    display: block;
+
+}
+.card-container > div.sliders > *:first-child > div {
+    margin-top: 0;
+}
+.card-container > div.sliders > *:last-child > div {
+    margin-bottom: 0;
 }
