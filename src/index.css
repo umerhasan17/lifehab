@@ -1,11 +1,12 @@
 /* font imports */
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500&display=swap');
 
 /* default styles */
 :root {
   --theme-color: #199353;
   
-  --shadow-color: rgba(38,50,56,0.2);
+  --shadow-color: rgba(38,50,56,0.15);
   
   --light-color: #CFD8DC;
   --lighter-color: #ECEFF1;
@@ -14,6 +15,7 @@
   --text-color: #37474F;
   --dark-text-color: #37474F;    
   --lighter-text-color: #90A4AE;
+  --light-text-color: #78909C;
 
   --container-width: 1000px;
 
@@ -37,17 +39,18 @@ body {
 div.container {
   width: 100%;
   padding: 3.5rem calc((100% - var(--container-width)) / 2);
+  padding-bottom: 1.5rem;
   overflow: hidden;
 }
 
 /* card rows */
 div.container > div.card-container {
-  width: calc(50% - 1rem);
+  width: calc(50% - 0.75rem);
   display: block;
   float: left;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 div.container > div.card-container:nth-child(odd) {
-  margin-right: 2rem;
+  margin-right: 1.5rem;
 }

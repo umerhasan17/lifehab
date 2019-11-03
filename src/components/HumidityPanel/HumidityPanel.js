@@ -24,8 +24,10 @@ export default class HumidityPanel extends React.Component {
         return (
             <div className='card-container'>
                 <div className='card-title'>{this.state.title}</div>
-                <SensorReading label="Air (%)" value={this.props.h1}/>
-                <SensorReading label="Soil (%)" value={this.props.h2}/>
+                <div className='readings'>
+                    <SensorReading label="Air (%)" value={this.props.h1}/>
+                    <SensorReading label="Soil (%)" value={this.props.h2}/>
+                </div>
                 <div className='sliders'>
                     {this.createSliders()}
                     <OnOffSwitch label={"Misting"} value={this.props.misting}/>

@@ -1,14 +1,32 @@
+/* card container */
 .card-container {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.5rem var(--shadow-color);
+    border-radius: 8px;
+    border: 1px solid var(--light-color);
+    padding: 1.5rem;
 }
 
-.card-container:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
+/* card title */
 .card-title {
     font-size: 2rem;
+    /*font-weight: 600;*/
     padding: 0.5rem 0;
     text-align: center;
+    letter-spacing: -.025rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--light-color);
+}
+
+/* card readings */
+.card-container > div.readings {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.card-container > div.readings > div.sensor-reading {
+    display: inline-block;
+    margin: 0 2rem;
+    margin-top: 1rem;
 }

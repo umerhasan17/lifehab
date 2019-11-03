@@ -25,7 +25,9 @@ export default class TemperaturePanel extends React.Component {
         return (
             <div className='card-container'>
                 <div className='card-title'>{this.state.title}</div>
-                {this.createSensorReadings()}
+                <div className='readings'>
+                    {this.createSensorReadings()}
+                </div>
                 <div className='sliders'>
                     <OnOffSwitch label={"Deep Heat Projector"} value={this.props.heater}/>
                 </div>

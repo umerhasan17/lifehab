@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const sliderThumbStyles = (props) => (`
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: darkgreen;
+  background: var(--theme-color);
   background: ${props.color};
   cursor: pointer;
   opacity: ${props.opacity};
@@ -17,11 +17,11 @@ const sliderThumbStyles = (props) => (`
 const Styles = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 1.25rem 0;
   .value {
-    flex: 1;
-    font-size: 1.5rem;
+    flex: 0.75;
+    font-size: 1.35rem;
+    font-family: "Fira Mono", monospace;
   }
   .slider-label {
     font-size: 1.2em;
@@ -31,10 +31,10 @@ const Styles = styled.div`
     flex: 6;
     -webkit-appearance: none;
     width: 100%;
-    height: 15px;
-    margin: 0 1rem;
+    height: 14px;
+    margin: 0 1.25rem;
     border-radius: 5px;
-    background: #efefef;
+    background: var(--lighter-color);
     outline: none;
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
